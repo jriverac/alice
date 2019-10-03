@@ -11,13 +11,10 @@ describe("Appointment", () => {
 
   it("renders the customer first name", () => {
     Enzyme.configure({ adapter: new Adapter() });
-    const props = {
-      customer: {
-        firstName: "Ashley",
-        lastName: "Smith"
-      }
-    };
-    const wrapper = mount(<Appointment {...props} />);
+
+    let customer = require("../resources/customer.json");
+    let customers = require("../resources/customers.json");
+    const wrapper = mount(<Appointment {...customer} />);
     expect(wrapper.find(".foo").text()).toBe("Ashley Smith");
   });
 
