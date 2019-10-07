@@ -3,7 +3,7 @@ import React from "react";
 export default class Appointment extends React.Component {
   render() {
     return (
-      <div className="foo">{`${this.props.customer.firstName} ${this.props.customer.lastName}`}</div>
+      <div className="foo">{`${this.props.firstName} ${this.props.lastName}`}</div>
     );
   }
 }
