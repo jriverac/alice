@@ -1,8 +1,14 @@
 import React from "react";
-import EditCustomer from "./edit-customer";
-
+import Router from "./router";
+const props = {
+  stuff: "here"
+};
 export default class App extends React.Component {
   render() {
-    return <EditCustomer {...props} />;
+    return (
+      <div>
+        <Router {...props} />
+      </div>
+    );
   }
 }
