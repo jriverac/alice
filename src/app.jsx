@@ -1,26 +1,26 @@
 import React from "react";
 import { createStore, combineReducers } from "redux";
+// import { createStore } from "redux";
 import { aboutReducer } from "./about/about-reducer";
-import {customers} from "./customers/customers-reducer";
+import { customerReducer } from "./customers/customer-reducer";
 
 import Router from "./router";
 
-const props = {
-  stuff: "here"
-};
+// export combineReducers({
+//   about,
+//   customers
+// });
+// debugger;
+const store = createStore(combineReducers(aboutReducer, customerReducer));
 
-export default combineReducers({
-  aboutReducer,
-  customers
-})
-
-const store = createStore(combineReducers, ['Use Redux'])
+// const store = createStore(about);
 
 export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Router {...props} />
+        <p>{`${store}`}</p>
+        <Router />
       </div>
     );
   }

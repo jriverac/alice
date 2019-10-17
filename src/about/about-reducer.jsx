@@ -1,16 +1,16 @@
-import { AgeAction, DeageAction } from "./about-actions";
-const type = {
-  AGE: "AGE"
-};
+import AboutActions from "./about-actions";
 
-const payload = {
-  payload: "23"
-};
+// var defaultState = {
+//   customer: { firstName: "" }
+// };
 
-export function aboutReducer({ type, payload }) {
-  switch (type) {
-    case AGE:
-      new AgeAction();
-    case DEAGE:
+export function aboutReducer(state = {}, action = AboutActions.Types.age) {
+  switch (action) {
+    case AboutActions.Types.age:
+      console.log(action);
+      return action;
+    default:
+      console.log("What??");
+      return "hello";
   }
 }
