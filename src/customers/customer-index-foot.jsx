@@ -9,6 +9,7 @@ export default class CustomerIndexFoot extends React.Component {
         <tr>
           <td>Size: {customers.length}</td>
           <td></td>
+          <td></td>
         </tr>
       </tfoot>
     );

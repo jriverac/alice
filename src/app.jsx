@@ -5,6 +5,7 @@ import React from "react";
 // import { customerReducer } from "./customers/customer-reducer";
 
 import Router from "./router";
+import Container from "react-bootstrap/container";
 
 // export combineReducers({
 //   about,
@@ -18,10 +19,20 @@ import Router from "./router";
 export default class App extends React.Component {
   render() {
     return (
-      <div>
-        <h1 id="the-title">The App</h1>
+      <Container fluid>
+        <link
+          rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://unpkg.com/react/umd/react.production.min.js"
+          crossorigin
+        />
+        <h1 id="the-title">The App bootstrap</h1>
         <Router />
-      </div>
+      </Container>
     );
   }
 }
