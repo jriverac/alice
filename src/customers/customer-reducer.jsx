@@ -17,6 +17,6 @@ export function customerReducer(
 
     default:
       console.log("What?");
-      return action;
+      return {};
   }
 }

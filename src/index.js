@@ -3,8 +3,7 @@ import ReactDOM from "react-dom";
 
 import "./index.css";
 
-import App from "./app";
-
+import App from "./App";
 const props = require("./resources/customer.json");
 
 ReactDOM.render(<App {...props} />, document.getElementById("root"));
