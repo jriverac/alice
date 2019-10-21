@@ -1,3 +1,7 @@
 #customer-index-table {
   width: 100%;
 }
+
+.listActions {
+  text-align: center;
+}
