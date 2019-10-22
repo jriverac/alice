@@ -1,12 +1,14 @@
 import React from "react";
+import Button from "react-bootstrap/button";
 export default class CustomerRow extends React.Component {
   render() {
     return (
-      <tr id={this.props.id}>
-        <td>{this.props.firstName}</td>
+      <tr id={`customer-${this.props.id}`}>
+        <td className="firstName">{this.props.firstName}</td>
         <td>{this.props.lastName}</td>
         <td className="listActions">
-          <button>Edit</button>
+          <Button>Edit</Button>&nbsp;
+          <Button>Delete</Button>
         </td>
       </tr>
     );

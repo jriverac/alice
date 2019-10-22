@@ -22,6 +22,7 @@ export default class CustomerIndex extends React.Component {
           <CustomerIndexFoot {...Customers} />
           <CustomerIndexBody {...Customers} />
         </Table>
+        <Button>New</Button>
       </div>
     );
   }

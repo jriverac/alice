@@ -9,6 +9,6 @@ Enzyme.configure({ adapter: new Adapter() });
 describe("App", () => {
   it("has a title", () => {
     const wrapper = mount(<App />);
-    expect(wrapper.find("#the-title").text()).toBe("The App");
+    expect(wrapper.find("#the-title").text()).toBe("The App Bootstrap");
   });
 });

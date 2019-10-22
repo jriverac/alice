@@ -6,7 +6,7 @@ export default class CustomerIndexBody extends React.Component {
     return (
       <tbody>
         {Customers.map(customer => (
-          <CustomerRow {...customer} />
+          <CustomerRow key={customer.id} {...customer} />
         ))}
       </tbody>
     );

@@ -3,7 +3,7 @@ import React from "react";
 export default class CustomerIndexFoot extends React.Component {
   render() {
     const customers = this.props.customers;
-    debugger;
+    // debugger;
     return (
       <tfoot>
         <tr>

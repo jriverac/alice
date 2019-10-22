@@ -4,6 +4,7 @@ import EditCustomer from "./customers/customer-edit";
 import CustomerIndex from "./customers/customer-index";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// import
 
 function Home() {
   return <h2>Home</h2>;
