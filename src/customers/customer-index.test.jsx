@@ -9,16 +9,59 @@ describe("CustomerIndex", () => {
     // console.log("Test");
   });
 
-  it("renders the customer first name", () => {
-    const customers = require("../../resources/customers.json");
-    Enzyme.configure({ adapter: new Adapter() });
-    // debugger;
-    const wrapper = mount(<CustomerIndex {...customers} />);
-    expect(
-      wrapper
-        .findWhere(node => node.key() === "1")
-        .find(".firstName")
-        .text()
-    ).toBe("Ashley");
+  describe("the first row", () => {
+    it("render first name", () => {
+      const customers = require("../../resources/customers.json");
+      Enzyme.configure({ adapter: new Adapter() });
+      const wrapper = mount(<CustomerIndex {...customers} />);
+
+      expect(
+        wrapper
+          .findWhere(node => node.key() === "1")
+          .find(".firstName")
+          .text()
+      ).toBe("Ashley");
+    });
+
+    it("render last name", () => {
+      const customers = require("../../resources/customers.json");
+      Enzyme.configure({ adapter: new Adapter() });
+      const wrapper = mount(<CustomerIndex {...customers} />);
+
+      expect(
+        wrapper
+          .findWhere(node => node.key() === "1")
+          .find(".lastName")
+          .text()
+      ).toBe("Smith");
+    });
+  });
+
+  describe("the second row", () => {
+    it("render first name", () => {
+      const customers = require("../../resources/customers.json");
+      Enzyme.configure({ adapter: new Adapter() });
+      const wrapper = mount(<CustomerIndex {...customers} />);
+
+      expect(
+        wrapper
+          .findWhere(node => node.key() === "2")
+          .find(".firstName")
+          .text()
+      ).toBe("John");
+    });
+
+    it("render last name", () => {
+      const customers = require("../../resources/customers.json");
+      Enzyme.configure({ adapter: new Adapter() });
+      const wrapper = mount(<CustomerIndex {...customers} />);
+
+      expect(
+        wrapper
+          .findWhere(node => node.key() === "2")
+          .find(".lastName")
+          .text()
+      ).toBe("Williams");
+    });
   });
 });

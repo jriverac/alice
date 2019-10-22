@@ -5,7 +5,7 @@ export default class CustomerRow extends React.Component {
     return (
       <tr id={`customer-${this.props.id}`}>
         <td className="firstName">{this.props.firstName}</td>
-        <td>{this.props.lastName}</td>
+        <td className="lastName">{this.props.lastName}</td>
         <td className="listActions">
           <Button>Edit</Button>&nbsp;
           <Button>Delete</Button>
