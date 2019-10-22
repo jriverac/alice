@@ -17,7 +17,7 @@ describe("CustomerIndex", () => {
 
       expect(
         wrapper
-          .findWhere(node => node.key() === "1")
+          .findWhere(node => node.key() == 1)
           .find(".firstName")
           .text()
       ).toBe("Ashley");
