@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "react-bootstrap/button";
-export default class CustomerRow extends React.Component {
+export default class CustomerIndexRow extends React.Component {
   render() {
     return (
       <tr id={`customer-${this.props.id}`}>

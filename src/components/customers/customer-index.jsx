@@ -16,7 +16,7 @@ export default class CustomerIndex extends React.Component {
     const Customers = this.props;
     return (
       <div id="customer-index">
-        <h1>Customers</h1>
+        <h1>Customers</h1>  
         <Table id="customer-index-table" striped bordered>
           <CustomerIndexHead />
           <CustomerIndexFoot {...Customers} />

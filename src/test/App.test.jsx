@@ -1,5 +1,5 @@
 import React from "react";
-import App from "./App";
+import App from "../App";
 import { mount } from "enzyme";
 import Enzyme from "enzyme";
 import Adapter from "enzyme-adapter-react-16";

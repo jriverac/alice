@@ -1,8 +1,9 @@
 import React from "react";
 // import { createStore, comlbineReducers } from "redux";
-// import { createStore } from "redux";
+import { createStore } from "redux";
 // import { aboutReducer } from "./about/about-reducer";
-// import { customerReducer } from "./customers/customer-reducer";
+// import { customerReducer } from "./customers/customers";
+import { counter } from "./reducers/customers";
 
 import Router from "./router";
 import Container from "react-bootstrap/container";
@@ -12,9 +13,8 @@ import Container from "react-bootstrap/container";
 //   customers
 // });
 // debugger;
-// const store = createStore(combineReducers(aboutReducer, customerReducer));
 
-// const store = createStore(customerReducer);
+let store = createStore(counter);
 
 export default class App extends React.Component {
   render() {
@@ -31,7 +31,7 @@ export default class App extends React.Component {
           crossOrigin="anonymous"
         />
         <h1 id="the-title">The App Bootstrap</h1>
-        <Router />
+        <Router {...store}/>
       </Container>
     );
   }

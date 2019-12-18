@@ -1,6 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
-import Appointment from "./appointment";
+import Appointment from "../appointment";
 import Enzyme from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 

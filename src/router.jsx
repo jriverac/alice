@@ -1,7 +1,7 @@
 import React from "react";
-import About from "./about/about";
-import EditCustomer from "./customers/customer-edit";
-import CustomerIndex from "./customers/customer-index";
+import About from "./components/about/about";
+import EditCustomer from "./components/customers/customer-edit";
+import CustomerIndex from "./components/customers/customer-index";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 // import
@@ -27,7 +27,9 @@ export default function Navigation() {
         <nav>
           <ul>
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">
+                Home
+              </Link>
             </li>
             <li>
               <Link to="/customer-edit">Edit Customer</Link>
@@ -51,12 +53,12 @@ export default function Navigation() {
             <EditCustomer {...props} />
           </Route>
           <Route path="/customers">
-            <CustomerIndex {...customers} />
+            <CustomerIndex {... this.customers} />
           </Route>
           <Route path="/users">
             <Users />
           </Route>
-          <Route path="/about">
+          <Route path="/about ">
             <About />
           </Route>
           <Route path="/">

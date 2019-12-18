@@ -1,12 +1,12 @@
 import React from "react";
-import CustomerRow from "./customer-row";
+import CustomerIndexRow from "./customer-index-row";
 export default class CustomerIndexBody extends React.Component {
   render() {
     const Customers = this.props.customers;
     return (
       <tbody>
         {Customers.map(customer => (
-          <CustomerRow key={customer.id} {...customer} />
+          <CustomerIndexRow key={customer.id} {...customer} />
         ))}
       </tbody>
     );
