@@ -14,7 +14,7 @@ import Container from "react-bootstrap/container";
 // });
 // debugger;
 
-let store = createStore(counter);
+// let store = createStore(counter);
 
 export default class App extends React.Component {
   render() {
@@ -31,7 +31,7 @@ export default class App extends React.Component {
           crossOrigin="anonymous"
         />
         <h1 id="the-title">The App Bootstrap</h1>
-        <Router {...store}/>
+        <Router />
       </Container>
     );
   }

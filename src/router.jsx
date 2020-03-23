@@ -53,7 +53,7 @@ export default function Navigation() {
             <EditCustomer {...props} />
           </Route>
           <Route path="/customers">
-            <CustomerIndex {... this.customers} />
+            <CustomerIndex {...customers}/>
           </Route>
           <Route path="/users">
             <Users />

@@ -1,8 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import {Provider} from "react-redux";
 
 import { createStore } from "redux";
-import { counter } from "./reducers/customers";
+import { customerReducer } from "./components/customers/customer-reducer";
+import { CustomerActions } from "./components/customers/customer-actions";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
@@ -10,6 +12,12 @@ import "./index.css";
 import App from "./App";
 const props = require("./resources/customer.json");
 
-var store = createStore(counter);
+var store = createStore(customerReducer);
 
-ReactDOM.render(<App {...props} />, document.getElementById("root"));
+  ReactDOM.render(
+    <Provider store={store}>
+      <App {...props} />
+    </Provider>, 
+    document.getElementById("root")
+  );
+
