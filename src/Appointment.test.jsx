@@ -9,7 +9,7 @@ describe("Appointment", () => {
     // console.log("Test");
   });
 
-  it("renders the customer first name", () => {
+  xit("renders the customer first name", () => {
     Enzyme.configure({ adapter: new Adapter() });
 
     let props = require("./resources/customer.json");

@@ -2,6 +2,7 @@ import React from "react";
 import About from "./about/about";
 import EditCustomer from "./customers/customer-edit";
 import CustomerIndex from "./customers/customer-index";
+import UserIndex from "./users/index.tsx";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 // import
@@ -14,13 +15,12 @@ function Home() {
 //   return <About />;
 // }
 
-function Users() {
-  return <h2>Users</h2>;
-}
+
 
 export default function Navigation() {
   const props = require("./resources/customer.json");
   const customers = require("./resources/customers.json");
+  const stuff = 'some stuff';
   return (
     <Router>
       <div>
@@ -54,10 +54,10 @@ export default function Navigation() {
             <CustomerIndex {...customers} />
           </Route>
           <Route path="/users">
-            <Users />
+            <UserIndex />
           </Route>
           <Route path="/about">
-            <About />
+            <About stuffa={stuff} />
           </Route>
           <Route path="/">
             <Home />
