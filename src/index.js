@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
 
-import App from "./app";
+import App from "./App";
 const props = require("./resources/customer.json");
 
 ReactDOM.render(<App {...props} />, document.getElementById("root"));
